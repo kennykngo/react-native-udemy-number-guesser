@@ -1,8 +1,9 @@
-import React from "react";
-import { Button, StyleSheet, Text, TextInput, View } from "react-native";
+import React from 'react';
+import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import Card from "../components/Card";
-import Colors from "../constants/colors";
+import Card from '../components/Card';
+import Input from '../components/Input';
+import Colors from '../constants/colors';
 
 const StartGameScreen = (props) => {
   return (
@@ -11,13 +12,20 @@ const StartGameScreen = (props) => {
       {/* <View style={styles.inputContainer}> */}
       <Card style={styles.inputContainer}>
         <Text> Select a Number</Text>
-        <TextInput />
+        <Input
+          style={styles.input}
+          autoCapitalize='none'
+          blurOnSubmit
+          autoCorrect={false}
+          keyboardType='number-pad'
+          maxLength={2}
+        />
         <View style={styles.buttonContainer}>
           <View style={styles.button}>
-            <Button title="Reset" onPress={() => {}} color={Colors.accent} />
+            <Button title='Reset' onPress={() => {}} color={Colors.accent} />
           </View>
           <View style={styles.button}>
-            <Button title="Confirm" onPress={() => {}} color={Colors.primary} />
+            <Button title='Confirm' onPress={() => {}} color={Colors.primary} />
           </View>
         </View>
       </Card>
@@ -29,12 +37,12 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     padding: 10,
-    alignItems: "center",
+    alignItems: 'center',
   },
   buttonContainer: {
-    flexDirection: "row",
-    width: "100%",
-    justifyContent: "space-between",
+    flexDirection: 'row',
+    width: '100%',
+    justifyContent: 'space-between',
     paddingHorizontal: 15,
   },
   title: {
@@ -43,11 +51,15 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     width: 300,
-    maxWidth: "80%",
-    alignItems: "center",
+    maxWidth: '80%',
+    alignItems: 'center',
   },
   button: {
     width: 100,
+  },
+  input: {
+    width: 50,
+    textAlign: 'center',
   },
 });
 

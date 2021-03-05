@@ -60,9 +60,11 @@ const styles = StyleSheet.create({
   },
   resultContainer: {
     marginHorizontal: 30,
+    marginVertical: 15,
   },
   resultText: {
     textAlign: 'center',
+    fontSize: 20,
   },
 });
 

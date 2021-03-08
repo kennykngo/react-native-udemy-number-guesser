@@ -43,10 +43,12 @@ const GameOverScreen = (props) => {
         <View
           style={{
             ...styles.imageContainer,
-            width: availableDeviceWidth * 0.7,
-            height: availableDeviceWidth * 0.7,
-            borderRadius: (availableDeviceWidth * 0.7) / 2,
-            marginVertical: availableDeviceHeight / 30,
+            ...{
+              width: availableDeviceWidth * 0.7,
+              height: availableDeviceWidth * 0.7,
+              borderRadius: (availableDeviceWidth * 0.7) / 2,
+              marginVertical: availableDeviceHeight / 30,
+            },
           }}
         >
           <Image
@@ -69,9 +71,9 @@ const GameOverScreen = (props) => {
               fontSize: availableDeviceHeight < 400 ? 16 : 20,
             }}
           >
-            Your phone needed
-            <Text style={styles.highlight}>{props.roundsNumber}</Text>
-            rounds to guess the number
+            Your phone needed{' '}
+            <Text style={styles.highlight}>{props.roundsNumber} </Text>
+            rounds to guess the number{' '}
             <Text style={styles.highlight}>{props.userNumber}</Text>.
           </BodyText>
         </View>

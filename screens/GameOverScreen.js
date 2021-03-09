@@ -3,6 +3,7 @@ import {
   Button,
   Dimensions,
   Image,
+  SafeAreaView,
   ScrollView,
   StyleSheet,
   Text,

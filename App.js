@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
-import * as Font from 'expo-font';
 import AppLoading from 'expo-app-loading';
+import * as Font from 'expo-font';
+import React, { useState } from 'react';
+import { SafeAreaView, StyleSheet, View } from 'react-native';
 
 import Header from './components/Header';
-import StartGameScreen from './screens/StartGameScreen';
-import GameScreen from './screens/GameScreen';
 import GameOverScreen from './screens/GameOverScreen';
+import GameScreen from './screens/GameScreen';
+import StartGameScreen from './screens/StartGameScreen';
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -60,10 +60,10 @@ export default function App() {
   }
 
   return (
-    <View style={styles.screen}>
+    <SafeAreaView style={styles.screen}>
       <Header title='Guess a Number' />
       {content}
-    </View>
+    </SafeAreaView>
   );
 }
 

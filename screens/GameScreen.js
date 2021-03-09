@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { ScreenOrientation } from 'expo';
+import * as ScreenOrientation from 'expo-screen-orientation';
 import React, { useEffect, useRef, useState } from 'react';
 import {
   Alert,
